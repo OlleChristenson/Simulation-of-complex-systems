@@ -1,6 +1,8 @@
 clc;clear;close;
 %Side program - to find thresholds for values (part 3)
-tic;
+%This code will run the disease simulation a number of times using different values for gamma
+%and then normalize the data over multiple runs to find thresholds for different values of beta.
+
 %Assumptions:
 %1) Short outbreak-time so that the population is constant
 %2) All parameters are changable except for the lattice space,
@@ -61,12 +63,3 @@ hold on
 title("d = "+diffusionRate+", "+"β = "+infectionProb+", "+"γ = 0.0035 to 0.6"+", "+"N = "+N+", "+"I0 = "+initialInfectionRate*100+"%")
 xlabel('K (= β/γ)')
 ylabel('Final removed agents (%)')
-
-toc;
-
-figure(16)
-surf(beta, beta./gamma, totalTotal'./10000)
-title('3D phase diagram')
-xlabel('beta')
-ylabel('K (=beta/gamma)')
-zlabel('% recovered')
