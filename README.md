@@ -1,5 +1,6 @@
 # Simulation-of-complex-systems
-Main programs are DiseaseSimulation.m and P3_GammaBetaRatio.m
+Main program is DiseaseSimulation.m
+Further main scripts to solve partial assignments are P3_GammaBetaRatio.m and Part4_plot.m
 
 # An implementation of disease spreading which is based on a SIR-model. 
 
