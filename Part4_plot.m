@@ -1,5 +1,5 @@
 clc;
-
+%Below are data obtained from P3_gammaBetaRatio.m for values of beta ranging from 0.1 to 0.9.
 beta1 = [11,70,796,920,986,993.500000000000,996,999,999.500000000000,1000,1000,1000,1000];
 beta2 = [10	59	514.500000000000	897	951.500000000000	987	990.500000000000	995.500000000000	998.500000000000	999	999.500000000000	1000	1000];
 beta3 = [12	34.5000000000000	331	803	914	975	964.500000000000	994.500000000000	996	998	999.500000000000	999.500000000000	1000];
@@ -20,9 +20,9 @@ y = K;
 
 [X, Y] = meshgrid(x, y);
 z = beta'/1000;
-
+%3D-plot of data to see thresholds and phase regions
 surf(X,Y,z)
 title("d = "+0.6+", "+"β = 0.1 to 0.9"+", "+"γ = 13 different values"+", "+"N = "+1000+", "+"I0 = "+1+"%")
-xlabel('Beta')
-ylabel('K (=beta/gamma)')
+xlabel('β')
+ylabel('K (=β/γ)')
 zlabel('R_inf - Final recovery rate (%)')
